@@ -1,0 +1,90 @@
+@import './variables.scss';
+@import './_mixins.scss';
+
+.button {
+  z-index: 10;
+  color: $black;
+  text-shadow: none;
+  width: fit-content;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  outline: none;
+  border: none;
+
+  @include for-mobile-only {
+    background-color: tomato;
+    padding: 0.5rem 1.2rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .label {
+    font-weight: bold;
+    margin-left: 0.8rem;
+
+    @include fluid-type(0.9rem, 1.1rem);
+    @include for-mobile-only {
+      margin-left: 0.6rem;
+    }
+  }
+
+  .icon {
+    @include fluid-type(1.1rem, 1.4rem);
+  }
+}
+
+.roundButton {
+  z-index: 10;
+  color: $black;
+  text-shadow: none;
+  padding: 0.4rem;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem;
+  outline: none;
+  border: none;
+  width: min-content;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+}
+
+.outlineRounded {
+  z-index: 10;
+  background-color: $buttonRound-color !important;
+  padding: 0.3rem;
+  border-radius: 100%;
+  cursor: pointer;
+  width: min-content;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem;
+  outline: none;
+  border: $button-border solid 2.2px;
+  font-size: 1rem;
+
+  &:hover {
+    border-color: $white;
+  }
+}
